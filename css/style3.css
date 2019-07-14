@@ -1,0 +1,55 @@
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 3px groove #daf000; 
+    border-radius: 5px;
+    min-height:400px;
+    background: white;
+}
+
+.footer{
+    background-color: #e78200;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background-color: #e78200;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+a {
+    color:floralwhite; 
+    font-weight: bold;
+}
+
+a:hover {
+    color: hotpink;
+  }
+
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+    background: white;
+    background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0),
+      linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+    background-size: 150px 150px;
+}
+
+.navbar-dark {
+     background-color: #900;
+}
