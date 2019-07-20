@@ -83,6 +83,119 @@
             </div>
         </div>
     </div>
+    <div id="reservationModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Make a Reservation</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form group row align-middle">
+                            <label for="numberOfGuests" class="col-12 col-sm-2 col-form-label">Number of
+                                Guests</label>
+                            <div class="col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberOfGuests"
+                                        id="numberOfGuests" value="1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberOfGuests"
+                                        id="numberOfGuests" value="2">
+                                    <label class="form-check-label" for="numberOfGuests">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberOfGuests"
+                                        id="numberOfGuests" value="3">
+                                    <label class="form-check-label" for="numberOfGuests">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberOfGuests"
+                                        id="numberOfGuests" value="4">
+                                    <label class="form-check-label" for="numberOfGuests">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberOfGuests"
+                                        id="numberOfGuests" value="5">
+                                    <label class="form-check-label" for="numberOfGuests">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberOfGuests"
+                                        id="numberOfGuests" value="6">
+                                    <label class="form-check-label" for="numberOfGuests">6</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form group row">
+                            <label for="Section" class="col-12 col-sm-2 col-form-label">
+                                Section
+                            </label>
+                            <div class="col-sm-10">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="Section" id="nonsmoking" autocomplete="off" checked>
+                                        Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="Section" id="smoking" autocomplete="off">
+                                        Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form group row mt-3">
+                            <label for="dateAndTime" class="col-12 col-sm-2 col-form-label">Date and
+                                Time</label>
+
+                            <div class="col-12 col-sm-5">
+                                <div class="input-group">
+
+                                    <input type="text" class="form-control" placeholder="Date"
+                                        aria-describedby="dateAndTime">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="dateAndTime"><i
+                                                class="fa fa-calendar-o"></i></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-5">
+                                <div class="input-group">
+
+                                    <input type="text" class="form-control" placeholder="Time"
+                                        aria-describedby="dateAndTime">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="dateAndTime"><i
+                                                class="fa fa-clock-o"></i></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form group row">
+
+                            <div class="col-12 col-sm-2 col-form-label"">
+                            </div>
+                            <div class=" col-12 col-sm-10">
+
+                                <div class="form group row">
+                                    <button type="button" class="btn btn-secondary ml-3 mx-1"
+                                        data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary mx-1">Reserve</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row">
@@ -95,18 +208,11 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3">
-                    <!--
-                    <button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false"
-                        autocomplete="off" id="reservation">Reserve Table</button> -->
-                    <a role="button" href="#reservation-card" class="btn btn-block nav-link btn-warning"
-                        data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#reserveform">Reserve Table</a>
+                    <a role="button" data-toggle="modal" data-target="#reservationModal"
+                        class="btn btn-block nav-link btn-warning">
+                        Reserve Table</a>
                 </div>
             </div>
-            <div>
-            </div>
-        </div>
-        </div>
         </div>
     </header>
 
@@ -160,47 +266,14 @@
                         <li data-target="#mycarousel" data-slide-to="2"></li>
                     </ol>
                     <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
                 </div>
             </div>
         </div>
-
-        <div class="form group row">
-            <label for="dateAndTime" class="col-12 col-sm-2 col-form-label">Date and
-                Time</label>
-
-            <div class="col-12 col-sm-5">
-                <div class="input-group">
-
-                    <input type="text" class="form-control" placeholder="Date" aria-describedby="dateAndTime">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="dateAndTime"><i class="fa fa-calendar-o"></i></span>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-5">
-                <div class="input-group">
-
-                    <input type="text" class="form-control" placeholder="Time" aria-describedby="dateAndTime">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="dateAndTime"><i class="fa fa-clock-o"></i></span>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="form group row">
-            <button type="submit" class="btn btn-primary m-3">Reserve</button>
-        </div>
-        </form>
-    </div>
-    </div>
-    </div>
     </div>
     <footer class="footer">
         <div class="container">
@@ -256,11 +329,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#reservation").click(function () {
-                $("html,body").scrollTop($("#reservation-card").offset().top);
-            });
 
-            $('[data-toggle="tooltip"]').tooltip();
         }
     </script>
 </body>
